@@ -20,6 +20,7 @@
  * Button Group................variáveis do Button Group.
  * Calendar....................variáveis do Calendar.
  * Chart.......................variáveis do Chart.
+ * Checkbox....................variáveis do Checkbox.
  * Checkbox Group..............variáveis do Checkbox Group.
  * Combo.......................variáveis do Combo.
  * Container...................variáveis do Container.
@@ -31,7 +32,6 @@
  * Field Container.............variáveis do Field Container.
  * Field Container Bottom......variáveis do Field Container Bottom.
  * Field Icon..................variáveis do Field Icon.
- * Gauge.......................variáveis do Gauge.
  * Info........................variáveis do Info.
  * Input.......................variáveis do Input.
  * List View...................variáveis do List View.
@@ -100,49 +100,49 @@
 
 :root {
   /* Cor do background da linha da tabela */
-  --color-primary-light-95: #fcf6f9;
+  --color-primary-light-95: #f6f6f6;
 
   /* Borda inferior da Table Header */
-  --color-primary-light-80: #f5dbe8;
+  --color-primary-light-80: #ddddde;
 
   /* Scroll (opacidade de 50%) */
-  --color-primary-alpha-50: rgba(201, 53, 125, 0.5);
+  --color-primary-alpha-50: rgba(88, 89, 91, 0.5);
 
   /* Botão primário, Links, Cor da borda do input selecionado, Cor da borda do botão secundário */
-  --color-primary: #c9357d;
+  --color-primary: #58595b;
 
   /* Hover do Botão primário, Links, Cor da borda do botão secundário */
-  --color-primary-dark-20: #9d2c67;
+  --color-primary-dark-20: #464748;
 
   /* Pressed do Botão primário, Links, Cor da borda do botão secundário */
-  --color-primary-dark-40: #8b255a;
+  --color-primary-dark-40: #343536;
 
   /* Secondary */
-  --color-secondary: #8241a4;
+  --color-secondary: #d1d3d4;
 
-  --color-secondary-dark-20: #733b8e;
+  --color-secondary-dark-20: #a5a9ab;
 
-  --color-secondary-dark-40: #5e2e73;
+  --color-secondary-dark-40: #7a7f82;
 
   /* Overlay de Modal e Menu (70% de opacidade) */
-  --color-secondary-dark-60-alpha-70: rgba(59, 28, 74, 0.7);
+  --color-secondary-dark-60-alpha-70: rgba(81, 85, 87, 0.7);
 
-  --color-secondary-dark-60: #3b1c4a;
+  --color-secondary-dark-60: #515557;
 
   /* Tertiary */
 
   /* Cor do background da linha de arquivo em carregamento (Upload) */
-  --color-tertiary-light-90: #fffaef;
+  --color-tertiary-light-90: #fdfdfd;
 
   /* Borda esquerda do menu lateral selecionado, Tab selecionada, Card em destaque */
-  --color-tertiary: #ffd464;
+  --color-tertiary: #f0f0f0;
 
   /* Cor de gráficos, botão do disclaimer */
-  --color-tertiary-dark-5: #f4d069;
+  --color-tertiary-dark-5: #e3e3e3;
 
-  --color-tertiary-dark-40: #d2b25a;
+  --color-tertiary-dark-40: #909090;
 
-  --color-tertiary-dark-60: #ac9249;
+  --color-tertiary-dark-60: #606060;
 
   --color-white: #ffffff;
 
@@ -187,24 +187,24 @@
   --color-black: #000000;
 
   /* Background do Feedback de sucesso */
-  --color-success: #00b28e;
+  --color-success: #38cf5b;
 
   /* Background do Feedback de atenção */
-  --color-warning: #ea9b3e;
+  --color-warning: #fac219;
 
-  --color-danger-light-40: #cd5f58;
+  --color-danger-light-40: #f98f8f;
 
   /* Background do Feedback de erro, Borda de Input com erro */
-  --color-danger: #c64840;
+  --color-danger: #f64545;
 
   /* Background disclaimer danger */
-  --color-danger-dark-5: #bb443c;
+  --color-danger-dark-5: #f53535;
 
   /* Hover para botão danger */
-  --color-danger-dark-20: #9e3933;
+  --color-danger-dark-20: #f00b0b;
 
   /* Estilo ativo para botão danger */
-  --color-danger-dark-40: #762b26;
+  --color-danger-dark-40: #b40808;
 
   --color-transparent: transparent;
 
@@ -213,18 +213,18 @@
   \*------------------------------------*/
 
   /* Cores que podem ser utilizadas na coluna de labels, legenda e cor de icones do componente table, também utilizadas na tag e badge */
-  --color-01: #0c9abe;
-  --color-02: #2c85c8;
-  --color-03: #2c43c8;
-  --color-04: #5843c8;
-  --color-05: #ab43c8;
-  --color-06: #ab4391;
-  --color-07: #c64840;
-  --color-08: #ea9b3e;
-  --color-09: #abc249;
-  --color-10: #56b96b;
-  --color-11: #00b28e;
-  --color-12: #06a6a5;
+  --color-01: #14ccb9;
+  --color-02: linear-gradient(90deg, #14ccb9 0%, #14dbc7 100%);
+  --color-03: #009bdd;
+  --color-04: linear-gradient(90deg, #009bdd 0%, #00dfcc 100%);
+  --color-05: #ee145b;
+  --color-06: linear-gradient(90deg, #ee145b 0%, #f37022 100%);
+  --color-07: #a6cf38;
+  --color-08: linear-gradient(90deg, #72bf44 0%, #a6ce39 100%);
+  --color-09: #f37022;
+  --color-10: linear-gradient(-90deg, #faa619 0%, #f37022 100%);
+  --color-11: #9b4088;
+  --color-12: linear-gradient(90deg, #9b4088 0%, #af4791 100%);
 
   /*------------------------------------*\
     FONT
@@ -234,9 +234,30 @@
    * Variáveis para definições de fontes. O PO utiliza as variantes *extra light*, *regular* e *bold* em seus componentes e, para cada uma delas,
    * é atribuído um @font-face específico. Os nomes elencados no `font-family` no @font-face devem ser os mesmos atribuídos como valor para as variáveis.
    */
-  --font-family-theme: Roboto;
-  --font-family-theme-bold: Roboto-Bold;
-  --font-family-theme-extra-light: Roboto-Condensed-Light;
+  --font-family-theme: OpenSans;
+  --font-family-theme-bold: OpenSans-Bold;
+  --font-family-theme-extra-light: OpenSans-ExtraLight;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: url("./../fonts/OpenSans/OpenSans-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url("./../fonts/OpenSans/OpenSans-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "OpenSans-ExtraLight";
+  src: url("./../fonts/OpenSans/OpenSans-Light.ttf");
+  font-weight: 200;
+  font-style: normal;
 }
 
 /*------------------------------------*\
@@ -249,12 +270,12 @@
 
   /**
    * Accordion Item
-  */
+   */
   --color-accordion-item-border-color: var(--color-neutral-light-90);
 
   /**
    * Accordion Item Header
-  */
+   */
   --color-accordion-header-button-background-color: var(--color-white);
   --color-accordion-header-color-primary: var(--color-primary);
   --color-accordion-header-color-hover: var(--color-secondary);
@@ -282,43 +303,43 @@
 
   /**
    * Button Default
-  */
+   */
   --color-button-background-color: var(--color-transparent);
-  --color-button-border: var(--color-secondary);
-  --color-button-color: var(--color-secondary);
+  --color-button-border: var(--color-primary);
+  --color-button-color: var(--color-primary);
 
   --color-button-background-color-hover: var(--color-transparent);
-  --color-button-border-hover: var(--color-secondary-dark-20);
-  --color-button-color-hover: var(--color-secondary-dark-20);
+  --color-button-border-hover: var(--color-primary-dark-20);
+  --color-button-color-hover: var(--color-primary-dark-20);
 
   --color-button-background-color-pressed: var(--color-transparent);
-  --color-button-border-pressed: var(--color-secondary-dark-40);
-  --color-button-color-pressed: var(--color-secondary-dark-40);
+  --color-button-border-pressed: var(--color-primary-dark-40);
+  --color-button-color-pressed: var(--color-primary-dark-40);
 
   --color-button-background-color-disabled: var(--color-transparent);
   --color-button-border-disabled: var(--color-neutral-light-60);
   --color-button-color-disabled: var(--color-neutral-light-60);
   /**
    * Button Primary
-  */
-  --color-button-background-color-primary: var(--color-tertiary);
-  --color-button-border-primary: var(--color-tertiary);
-  --color-button-color-primary: var(--color-neutral-dark-60);
+   */
+  --color-button-background-color-primary: var(--color-primary);
+  --color-button-border-primary: var(--color-primary);
+  --color-button-color-primary: var(--color-white);
 
-  --color-button-background-color-primary-hover: var(--color-tertiary-dark-40);
-  --color-button-border-primary-hover: var(--color-tertiary-dark-40);
-  --color-button-color-primary-hover: var(--color-neutral-dark-60);
+  --color-button-background-color-primary-hover: var(--color-primary-dark-20);
+  --color-button-border-primary-hover: var(--color-primary-dark-20);
+  --color-button-color-primary-hover: var(--color-neutral-light-90);
 
-  --color-button-background-color-primary-pressed: var(--color-tertiary-dark-60);
-  --color-button-border-primary-pressed: var(--color-tertiary-dark-60);
-  --color-button-color-primary-pressed: var(--color-neutral-dark-60);
+  --color-button-background-color-primary-pressed: var(--color-primary-dark-40);
+  --color-button-border-primary-pressed: var(--color-primary-dark-40);
+  --color-button-color-primary-pressed: var(--color-white);
 
   --color-button-background-color-primary-disabled: var(--color-neutral-light-60);
   --color-button-border-primary-disabled: var(--color-neutral-light-60);
   --color-button-color-primary-disabled: var(--color-white);
   /**
    * Button Danger
-  */
+   */
   --color-button-background-color-danger: var(--color-transparent);
   --color-button-border-danger: var(--color-danger);
   --color-button-color-danger: var(--color-danger);
@@ -336,7 +357,7 @@
   --color-button-color-danger-disabled: var(--color-neutral-light-60);
   /**
    * Button Link
-  */
+   */
   --color-button-background-color-link: var(--color-transparent);
   --color-button-color-link: var(--color-primary);
 
@@ -361,7 +382,7 @@
 
   /**
    * Breadcrumb
-  */
+   */
   --color-breadcrumb-background-color-container: var(--color-white);
   --color-breadcrumb-border-color-container: var(--color-neutral-light-90);
 
@@ -371,7 +392,7 @@
   --color-breadcrumb-color-star-active: var(--color-warning);
   /**
    * Breadcrumb Dropdown
-  */
+   */
   --color-breadcrumb-background-color-dropdown: var(--color-white);
   --color-breadcrumb-background-color-dropdown-item-hover: var(--color-primary-light-95);
 
@@ -430,9 +451,6 @@
 
   --color-chart-background-color: var(--color-white);
   --color-chart-legend-wrapper-scrollbar: var(--color-primary-alpha-50);
-  --color-chart-axis-stroke: var(--color-neutral-light-80);
-  --color-chart-legend-text: var(--color-neutral);
-  --color-chart-axis-label-text: var(--color-neutral-dark-60);
 
   /**
    * Chart Types
@@ -440,8 +458,6 @@
   --color-chart-gauge-base-path-color: var(--color-neutral-light-80);
   --color-chart-gauge-text-content-focus: var(--color-secondary);
   --color-chart-gauge-text-description-color: var(--color-neutral);
-
-  --color-chart-line-point-fill: var(--color-white);
 
   /*------------------------------------*\
     CHECKBOX
@@ -537,7 +553,7 @@
     DIVIDER
   \*------------------------------------*/
 
-  --color-divider-label-color: var(--color-neutral-dark-60);
+  --color-divider-label-color: var(--color-primary);
   --color-divider-line-color: var(--color-neutral-light-90);
 
   /*------------------------------------*\
@@ -576,17 +592,6 @@
   --color-field-icon-color: var(--color-primary);
   --color-field-icon-color-error: var(--color-danger);
   --color-field-icon-color-disabled: var(--color-neutral-light-60);
-
-  /*------------------------------------*\
-    GAUGE
-  \*------------------------------------*/
-
-  --color-gauge-base-color: var(--color-neutral-light-80);
-  --color-gauge-description-text-color: var(--color-neutral);
-  --color-gauge-description-bottom-focus: var(--color-secondary);
-  --color-gauge-legend-scrollbar: var(--color-primary-alpha-50);
-  --color-gauge-legend-text: var(--color-neutral);
-  --color-gauge-pointer-color: var(--color-neutral);
 
   /*------------------------------------*\
     INFO
@@ -643,7 +648,6 @@
   --color-lookup-search-background-color-text: var(--color-white);
   --color-lookup-search-border-text: var(--color-neutral-light-60);
   --color-lookup-search-border-text-focusable: var(--color-primary);
-  --color-lookup-advanced-search-link-color-text: var(--color-primary);
 
   /*------------------------------------*\
     MENU
@@ -651,25 +655,25 @@
 
   --color-menu-color-menu-collapse-icon: var(--color-primary);
   --color-menu-color-menu-item-text: var(--color-primary);
-  --color-menu-color-menu-item-selected: var(--color-primary);
+  --color-menu-color-menu-item-selected: var(--color-danger-light-40);
   --color-menu-color-menu-sub-item-text: var(--color-danger-light-40);
   --color-menu-color-menu-sub-item-selected: var(--color-neutral-dark-60);
   --color-menu-color-menu-responsive: var(--color-primary);
 
   --color-menu-background-color-item-grouper-up-hover: var(--color-neutral-light-98);
-  --color-menu-background-color-item-hover: var(--color-black-alpha-15);
-  --color-menu-background-color-item-selected: var(--color-neutral-light-80);
+  --color-menu-background-color-item-hover: var(--color-primary-light-95);
+  --color-menu-background-color-item-selected: var(--color-transparent);
   --color-menu-background-color-menu: var(--color-white);
   --color-menu-background-color-menu-responsive-overlay: var(--color-secondary-dark-60-alpha-70);
   --color-menu-background-color-responsive: var(--color-neutral-light-98);
   --color-menu-background-color-sub-items: var(--color-neutral-light-98);
   --color-menu-background-color-sub-item-selected: var(--color-neutral-light-80);
 
-  --color-menu-border-color-menu-item-selected: var(--color-danger-light-40);
+  --color-menu-border-color-menu-item-selected: var(--color-transparent);
   --color-menu-border-left-item: var(--color-transparent);
-  --color-menu-border-top-item-grouper-up-hover: var(--color-neutral-light-80);
-  --color-menu-border-top-logo: var(--color-neutral-light-80);
-  --color-menu-border-top-collapse-button: var(--color-neutral-alpha-45);
+  --color-menu-border-top-item-grouper-up-hover: var(--color-transparent);
+  --color-menu-border-top-logo: var(--color-transparent);
+  --color-menu-border-top-collapse-button: var(--color-transparent);
 
   /*------------------------------------*\
    MENU FILTER
@@ -785,7 +789,7 @@
    PAGE
   \*------------------------------------*/
 
-  --color-page-background-color-page: var(--color-white);
+  --color-page-background-color-page: var(--color-neutral-light-98);
 
   /*------------------------------------*\
     PAGE BACKGROUND
@@ -838,8 +842,6 @@
     PAGE LOGIN
   \*------------------------------------*/
 
-  --color-page-login-header-product-name-color: var(--color-neutral);
-  --color-page-login-header-welcome-color: var(--color-secondary);
   --color-page-login-background-color: var(--color-neutral-light-98);
   --color-page-login-background-highlight-image: var(--color-neutral-light-90);
   --color-page-login-highlight-text-color: var(--color-white);
@@ -847,15 +849,6 @@
   --color-page-login-link-hover-color: var(--color-primary-dark-20);
   --color-page-login-popover-color-attempts: var(--color-primary);
   --color-page-login-popover-color-title: var(--color-tertiary);
-  --color-page-login-support-background-color: var(--color-white);
-  --color-page-login-support-color: var(--color-primary);
-
-  /*------------------------------------*\
-    PAGE SLIDE
-  \*------------------------------------*/
-
-  --color-page-slide-close-button-color: var(--color-primary);
-  --color-page-slide-body-text-color: var(--color-neutral-dark-60);
 
   /*------------------------------------*\
     POPOVER
@@ -876,7 +869,6 @@
   --color-popup-background-color-popup-item-selected: var(--color-primary);
   --color-popup-background-color-popup-item-selected-hover: var(--color-primary-dark-20);
   --color-popup-background-color-popup-item-selected-disabled: var(--color-neutral-light-60);
-  --color-popup-background-color-scrollbar: var(--color-primary);
 
   --color-popup-border-color-separator: var(--color-neutral-light-90);
 
@@ -1138,13 +1130,13 @@
   \*------------------------------------*/
 
   --color-toolbar-background-color-badge: var(--color-danger);
-  --color-toolbar-background-color-toolbar: var(--color-white);
+  --color-toolbar-background-color-toolbar: var(--color-page-background-color-page);
 
   --color-toolbar-border-color-separator: var(--color-neutral-light-90);
 
   --color-toolbar-color-badge-text: var(--color-white);
   --color-toolbar-color-default: var(--color-primary);
-  --color-toolbar-color-title: var(--color-secondary);
+  --color-toolbar-color-title: var(--color-primary);
 
   /*------------------------------------*\
    TOOLTIP
