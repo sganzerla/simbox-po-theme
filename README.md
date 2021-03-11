@@ -12,7 +12,7 @@ Em seguida, atualize o arquivo `angular.json` para utilizar o tema.
 
 ```json
 "styles": [
-   "node_modules/simbox-po-theme/src/po-theme-custom.css"
+   "node_modules/simbox-po-theme/css/po-theme-default.min.css"
 ]
 ```
 
