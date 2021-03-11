@@ -1,5 +1,5 @@
 /**
- * @theme: po-ui
+ * @theme: Simbox Theme
  **/
 
 /**
@@ -20,6 +20,7 @@
  * Button Group................variáveis do Button Group.
  * Calendar....................variáveis do Calendar.
  * Chart.......................variáveis do Chart.
+ * Checkbox....................variáveis do Checkbox.
  * Checkbox Group..............variáveis do Checkbox Group.
  * Combo.......................variáveis do Combo.
  * Container...................variáveis do Container.
@@ -31,6 +32,7 @@
  * Field Container.............variáveis do Field Container.
  * Field Container Bottom......variáveis do Field Container Bottom.
  * Field Icon..................variáveis do Field Icon.
+ * Gauge.......................variáveis do Gauge.
  * Info........................variáveis do Info.
  * Input.......................variáveis do Input.
  * List View...................variáveis do List View.
@@ -205,7 +207,7 @@
 
   --color-transparent: transparent;
 
-/*------------------------------------*\
+  /*------------------------------------*\
   COLOR-PALETTE
 \*------------------------------------*/
 
@@ -223,7 +225,7 @@
   --color-11: #00b28e;
   --color-12: #06a6a5;
 
-/*------------------------------------*\
+  /*------------------------------------*\
   FONT
 \*------------------------------------*/
 
@@ -234,7 +236,6 @@
   --font-family-theme: NunitoSans;
   --font-family-theme-bold: NunitoSans-Bold;
   --font-family-theme-extra-light: NunitoSans-ExtraLight;
-
 }
 
 @font-face {
@@ -262,44 +263,44 @@
   COMPONENTS
 \*------------------------------------*/
 :root {
-/*------------------------------------*\
+  /*------------------------------------*\
   ACCORDION
 \*------------------------------------*/
 
-/**
+  /**
  * Accordion Item
  */
   --color-accordion-item-border-color: var(--color-neutral-light-90);
 
-/**
+  /**
 * Accordion Item Header
 */
   --color-accordion-header-button-background-color: var(--color-white);
   --color-accordion-header-color-primary: var(--color-primary);
   --color-accordion-header-color-hover: var(--color-secondary);
 
-/**
+  /**
 * Accordion Item Header Button
 */
   --color-accordion-item-header-button-background-color: var(--color-transparent);
   --color-accordion-item-header-button-focus: var(--color-secondary);
 
-/**
+  /**
 * Accordion Item Body
 */
   --color-accordion-item-body-color: var(--color-neutral);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   AVATAR
 \*------------------------------------*/
 
---color-avatar-background-color-avatar: var(--color-neutral);
+  --color-avatar-background-color-avatar: var(--color-neutral);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   BUTTON
 \*------------------------------------*/
 
-/**
+  /**
  * Button Default
  */
   --color-button-background-color: var(--color-transparent);
@@ -317,7 +318,7 @@
   --color-button-background-color-disabled: var(--color-transparent);
   --color-button-border-disabled: var(--color-neutral-light-60);
   --color-button-color-disabled: var(--color-neutral-light-60);
-/**
+  /**
  * Button Primary
  */
   --color-button-background-color-primary: var(--color-primary);
@@ -335,7 +336,7 @@
   --color-button-background-color-primary-disabled: var(--color-neutral-light-60);
   --color-button-border-primary-disabled: var(--color-neutral-light-60);
   --color-button-color-primary-disabled: var(--color-white);
-/**
+  /**
  * Button Danger
  */
   --color-button-background-color-danger: var(--color-transparent);
@@ -353,7 +354,7 @@
   --color-button-background-color-danger-disabled: var(--color-transparent);
   --color-button-border-danger-disabled: var(--color-neutral-light-60);
   --color-button-color-danger-disabled: var(--color-neutral-light-60);
-/**
+  /**
  * Button Link
  */
   --color-button-background-color-link: var(--color-transparent);
@@ -368,17 +369,17 @@
   --color-button-background-color-link-disabled: var(--color-transparent);
   --color-button-color-link-disabled: var(--color-neutral-light-60);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   BADGE
 \*------------------------------------*/
 
   --color-badge-color: var(--color-white);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   BREADCRUMB
 \*------------------------------------*/
 
-/**
+  /**
  * Breadcrumb
  */
   --color-breadcrumb-background-color-container: var(--color-white);
@@ -388,13 +389,13 @@
   --color-breadcrumb-color-item-link-hover: var(--color-primary-dark-40);
   --color-breadcrumb-color-item-unclickable: var(--color-neutral);
   --color-breadcrumb-color-star-active: var(--color-warning);
-/**
+  /**
  * Breadcrumb Dropdown
  */
   --color-breadcrumb-background-color-dropdown: var(--color-white);
   --color-breadcrumb-background-color-dropdown-item-hover: var(--color-primary-light-95);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   BUTTON GROUP
 \*------------------------------------*/
 
@@ -418,7 +419,7 @@
   --color-button-group-border-neutral-disabled: var(--color-neutral-light-60);
   --color-button-group-color-neutral-disabled: var(--color-white);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   CALENDAR
 \*------------------------------------*/
 
@@ -443,14 +444,43 @@
   --color-calendar-color-box-foreground-today: var(--color-primary);
   --color-calendar-color-box-foreground-disabled: var(--color-neutral-light-80);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   CHART
 \*------------------------------------*/
 
   --color-chart-background-color: var(--color-white);
   --color-chart-legend-wrapper-scrollbar: var(--color-primary-alpha-50);
+  --color-chart-axis-stroke: var(--color-neutral-light-80);
+  --color-chart-legend-text: var(--color-neutral);
+  --color-chart-axis-label-text: var(--color-neutral-dark-60);
 
-/*------------------------------------*\
+  /**
+   * Chart Types
+   */
+  --color-chart-gauge-base-path-color: var(--color-neutral-light-80);
+  --color-chart-gauge-text-content-focus: var(--color-secondary);
+  --color-chart-gauge-text-description-color: var(--color-neutral);
+
+  --color-chart-line-point-fill: var(--color-white);
+
+  /*------------------------------------*\
+  CHECKBOX
+\*------------------------------------*/
+
+  --color-checkbox-background-color: var(--color-white);
+  --color-checkbox-background-color-active: var(--color-primary);
+  --color-checkbox-background-color-disabled: var(--color-neutral-light-90);
+  --color-checkbox-background-color-icon-disabled: var(--color-neutral-light-60);
+  --color-checkbox-box-shadow-color-focusable: var(--color-primary-dark-20);
+
+  --color-checkbox-border-input: var(--color-neutral-light-60);
+  --color-checkbox-border-input-active: var(--color-primary);
+  --color-checkbox-border-input-disabled: var(--color-neutral-light-60);
+  --color-checkbox-border-input-invalid: var(--color-danger);
+
+  --color-checkbox-color-active: var(--color-white);
+
+  /*------------------------------------*\
   CHECKBOX GROUP
 \*------------------------------------*/
 
@@ -467,7 +497,7 @@
 
   --color-checkbox-group-color-active: var(--color-white);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   COMBO
 \*------------------------------------*/
 
@@ -478,18 +508,20 @@
 
   --color-combo-border-button-error: var(--color-danger);
 
+  --color-combo-background-color-group-title: var(--color-neutral-light-98);
+  --color-combo-color-group-title: var(--color-neutral-dark-60);
   --color-combo-color-primary: var(--color-primary);
   --color-combo-color-selected: var(--color-white);
   --color-combo-background-color-selected-primary: var(--color-primary);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   CONTAINER
 \*------------------------------------*/
 
   --color-container-color-shadow: var(--color-neutral-light-90);
   --color-container-background-color-scrollbar: var(--color-primary);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   DATEPICKER RANGE
 \*------------------------------------*/
 
@@ -500,7 +532,7 @@
   --color-datepicker-range-color-focused: var(--color-primary);
   --color-datepicker-range-color-text-error: var(--color-danger);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   DISCLAIMER
 \*------------------------------------*/
 
@@ -513,7 +545,7 @@
   --color-disclaimer-background-color-remove: var(--color-tertiary-dark-5);
   --color-disclaimer-background-color-danger-remove: var(--color-danger-dark-5);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   DISCLAIMER GROUP
 \*------------------------------------*/
 
@@ -521,14 +553,14 @@
   --color-disclaimer-group-border-color: var(--color-neutral-light-90);
   --color-disclaimer-group-font-title: var(--color-neutral);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   DIVIDER
 \*------------------------------------*/
 
   --color-divider-label-color: var(--color-tertiary);
   --color-divider-line-color: var(--color-neutral-light-90);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   DROPDOWN
 \*------------------------------------*/
 
@@ -542,7 +574,7 @@
   --color-dropdown-button-color-disabled: var(--color-neutral-light-60);
   --color-dropdown-button-border-color-disabled: var(--color-neutral-light-60);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   FIELD CONTAINER
 \*------------------------------------*/
 
@@ -550,14 +582,14 @@
   --color-field-container-color-opcional: var(--color-neutral);
   --color-field-container-color-help: var(--color-neutral);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   FIELD CONTAINER BOTTOM
 \*------------------------------------*/
 
   --color-field-container-bottom-color-text: var(--color-black);
   --color-field-container-bottom-color-text-error: var(--color-danger);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   FIELD ICON
 \*------------------------------------*/
 
@@ -565,14 +597,29 @@
   --color-field-icon-color-error: var(--color-danger);
   --color-field-icon-color-disabled: var(--color-neutral-light-60);
 
-/*------------------------------------*\
+  /*------------------------------------*\
+  GAUGE
+\*------------------------------------*/
+
+  --color-gauge-base-color: var(--color-neutral-light-80);
+  --color-gauge-description-text-color: var(--color-neutral);
+  --color-gauge-description-bottom-focus: var(--color-secondary);
+  --color-gauge-legend-scrollbar: var(--color-primary-alpha-50);
+  --color-gauge-legend-text: var(--color-neutral);
+  --color-gauge-pointer-color: var(--color-neutral);
+
+  /*------------------------------------*\
   INFO
 \*------------------------------------*/
 
   --color-info-color-text-label: var(--color-neutral);
   --color-info-color-text-value: var(--color-neutral-dark-60);
 
-/*------------------------------------*\
+  --color-info-color-link: var(--color-primary);
+  --color-info-color-link-hover: var(--color-primary-dark-20);
+  --color-info-color-link-pressed: var(--color-primary-dark-40);
+
+  /*------------------------------------*\
   INPUT
 \*------------------------------------*/
 
@@ -585,7 +632,7 @@
   --color-input-text-error: var(--color-danger);
   --color-input-text-placeholder: var(--color-neutral-light-40);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   LIST VIEW
 \*------------------------------------*/
 
@@ -595,7 +642,7 @@
   --color-list-view-color-primary-hover: var(--color-primary-dark-20);
   --color-list-view-color-select-all-label: var(--color-neutral);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   LOADING
 \*------------------------------------*/
 
@@ -603,22 +650,23 @@
   --color-loading-icon-color-neutral: var(--color-neutral-light-80);
   --color-loading-icon-color-primary: var(--color-primary);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   LOADING OVERLAY
 \*------------------------------------*/
 
   --color-loading-overlay-background-color-content: var(--color-white);
   --color-loading-overlay-box-shadow-content: var(--color-black-alpha-30);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   LOOKUP
 \*------------------------------------*/
 
   --color-lookup-search-background-color-text: var(--color-white);
   --color-lookup-search-border-text: var(--color-neutral-light-60);
   --color-lookup-search-border-text-focusable: var(--color-primary);
+  --color-lookup-advanced-search-link-color-text: var(--color-primary);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   MENU
 \*------------------------------------*/
 
@@ -644,7 +692,7 @@
   --color-menu-border-top-logo: var(--color-neutral-alpha-45);
   --color-menu-border-top-collapse-button: var(--color-neutral-alpha-45);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   MENU FILTER
 \*------------------------------------*/
 
@@ -656,7 +704,7 @@
   --color-menu-filter-border: var(--color-neutral-alpha-45);
   --color-menu-filter-border-focusable: var(--color-neutral);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   MENU PANEL
 \*------------------------------------*/
 
@@ -669,7 +717,7 @@
   --color-menu-panel-color-menu-item-text: var(--color-primary);
   --color-menu-panel-color-menu-item-selected: var(--color-white);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   MODAL
 \*------------------------------------*/
 
@@ -681,7 +729,7 @@
   --color-modal-color-title: var(--color-neutral);
   --color-modal-color-header-close-button: var(--color-primary);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   MODAL PASSWORD RECOVERY
 \*------------------------------------*/
 
@@ -689,7 +737,7 @@
   --color-modal-password-recovery-link-color-hover: var(--color-primary-dark-20);
   --color-modal-password-recovery-text-color: var(--color-neutral);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   MULTISELECT
 \*------------------------------------*/
 
@@ -721,25 +769,25 @@
 
   --color-multiselect-disclaimer-background-color-disabled: var(--color-neutral-light-60);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   NAVBAR
 \*------------------------------------*/
 
   --color-navbar-color: var(--color-white);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   NAVBAR ACTION
 \*------------------------------------*/
 
   --color-navbar-action-color-content: var(--color-primary);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   NAVBAR ACTION POPUP
 \*------------------------------------*/
 
   --color-navbar-action-popup-color-content: var(--color-navbar-action-color-content);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   NAVBAR ITEM
 \*------------------------------------*/
 
@@ -747,26 +795,26 @@
   --color-navbar-item-color-selected: var(--color-neutral);
   --color-navbar-item-color-shadow-selected: var(--color-primary);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   NAVBAR ITEM NAVIGATION
 \*------------------------------------*/
 
   --color-navbar-item-navigation-color-icon: var(--color-primary);
   --color-navbar-item-navigation-color-icon-disabled: var(--color-neutral-light-80);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   PAGE
 \*------------------------------------*/
 
   --color-page-background-color-page: var(--color-neutral-light-98);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   PAGE BACKGROUND
 \*------------------------------------*/
 
   --color-page-background-select-item-border-color: var(--color-neutral-light-90);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   PAGE BLOCKED USER
 \*------------------------------------*/
 
@@ -775,7 +823,7 @@
   --color-page-blocked-user-text-color: var(--color-neutral);
   --color-page--blocked-user-background-color: var(--color-neutral-light-98);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   PAGE CHANGE PASSWORD
 \*------------------------------------*/
 
@@ -789,28 +837,30 @@
   --color-page-change-password-color-required-minus: var(--color-black-alpha-30);
   --color-page-change-password-color-required-text: var(--color-secondary-dark-60-alpha-70);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   PAGE CONTENT
 \*------------------------------------*/
 
   --color-page-content-background-color-scrollbar: var(--color-primary);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   PAGE HEADER
 \*------------------------------------*/
 
   --color-page-header-color-title: var(--color-neutral);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   PAGE LIST
 \*------------------------------------*/
 
   --color-page-list-color-link-text: var(--color-primary);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   PAGE LOGIN
 \*------------------------------------*/
 
+  --color-page-login-header-product-name-color: var(--color-neutral);
+  --color-page-login-header-welcome-color: var(--color-tertiary);
   --color-page-login-background-color: var(--color-neutral-light-98);
   --color-page-login-background-highlight-image: var(--color-neutral-light-90);
   --color-page-login-highlight-text-color: var(--color-white);
@@ -818,8 +868,17 @@
   --color-page-login-link-hover-color: var(--color-primary-dark-20);
   --color-page-login-popover-color-attempts: var(--color-primary);
   --color-page-login-popover-color-title: var(--color-tertiary);
+  --color-page-login-support-background-color: var(--color-white);
+  --color-page-login-support-color: var(--color-primary);
 
-/*------------------------------------*\
+  /*------------------------------------*\
+    PAGE SLIDE
+  \*------------------------------------*/
+
+  --color-page-slide-close-button-color: var(--color-primary);
+  --color-page-slide-body-text-color: var(--color-neutral-dark-60);
+
+  /*------------------------------------*\
   POPOVER
 \*------------------------------------*/
 
@@ -829,7 +888,7 @@
 
   --color-popover-color-text-title: var(--color-neutral);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   POPUP
 \*------------------------------------*/
 
@@ -838,6 +897,7 @@
   --color-popup-background-color-popup-item-selected: var(--color-primary);
   --color-popup-background-color-popup-item-selected-hover: var(--color-primary-dark-20);
   --color-popup-background-color-popup-item-selected-disabled: var(--color-neutral-light-60);
+  --color-popup-background-color-scrollbar: var(--color-primary);
 
   --color-popup-border-color-separator: var(--color-neutral-light-90);
 
@@ -846,28 +906,28 @@
   --color-popup-color-disabled: var(--color-neutral-light-80);
   --color-popup-color-item-selected: var(--color-white);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   PROGRESS
 \*------------------------------------*/
 
---color-progress-color-info-icon: var(--color-primary);
---color-progress-color-text: var(--color-neutral);
---color-progress-color-text-success: var(--color-success);
---color-progress-color-text-error: var(--color-danger);
---color-progress-color-info: var(--color-neutral);
+  --color-progress-color-info-icon: var(--color-primary);
+  --color-progress-color-text: var(--color-neutral);
+  --color-progress-color-text-success: var(--color-success);
+  --color-progress-color-text-error: var(--color-danger);
+  --color-progress-color-info: var(--color-neutral);
 
---color-progress-border-color-info-icon-close: var(--color-secondary);
+  --color-progress-border-color-info-icon-close: var(--color-secondary);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   PROGRESS BAR
 \*------------------------------------*/
 
---color-progress-bar-background-color-bar: var(--color-tertiary-light-90);
---color-progress-bar-background-color-default: var(--color-tertiary);
---color-progress-bar-background-color-success: var(--color-success);
---color-progress-bar-background-color-error: var(--color-danger);
+  --color-progress-bar-background-color-bar: var(--color-tertiary-light-90);
+  --color-progress-bar-background-color-default: var(--color-tertiary);
+  --color-progress-bar-background-color-success: var(--color-success);
+  --color-progress-bar-background-color-error: var(--color-danger);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   RADIO-GROUP
 \*------------------------------------*/
 
@@ -882,7 +942,7 @@
   --color-radio-group-color-label-active: var(--color-white);
   --color-radio-group-color-text-disabled: var(--color-neutral-light-60);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   RICH TEXT
 \*------------------------------------*/
 
@@ -895,7 +955,7 @@
 
   --color-rich-text-toolbar-background-color: var(--color-rich-text-body-background-color);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   SELECT
 \*------------------------------------*/
 
@@ -920,7 +980,7 @@
   --color-select-background-color-selected: var(--color-primary);
   --color-select-color-text-error: var(--color-danger);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   SLIDE
 \*------------------------------------*/
 
@@ -932,7 +992,7 @@
   --color-slide-box-shadow-arrow-circle: var(--color-black-alpha-15);
   --color-slide-box-shadow-wrapper: var(--color-black-alpha-30);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   STEPPER
 \*------------------------------------*/
 
@@ -944,7 +1004,7 @@
   --color-stepper-circle-error: var(--color-danger);
   --color-stepper-circle-icon: var(--color-white);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   SWITCH
 \*------------------------------------*/
 
@@ -962,7 +1022,7 @@
 
   --color-switch-color-label: var(--color-neutral);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   TAB BUTTON
 \*------------------------------------*/
 
@@ -972,7 +1032,7 @@
   --color-tab-button-color: var(--color-primary);
   --color-tab-button-color-disabled: var(--color-neutral-light-60);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   TAB DROPDOWN
 \*------------------------------------*/
 
@@ -982,7 +1042,7 @@
 
   --color-tab-dropdown-color-tab-dropdown-button: var(--color-white);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   TABLE
 \*------------------------------------*/
 
@@ -998,11 +1058,15 @@
   --color-table-background-color-scrollbar: var(--color-primary);
   --color-table-background-color-selected: var(--color-primary);
   --color-table-background-color-table: var(--color-white);
+  --color-table-background-color-radio: var(--color-white);
+  --color-table-background-color-radio-active: var(--color-primary);
 
   --color-table-border-footer-show-subtitle: var(--color-neutral-light-90);
   --color-table-border-select-checkbox: var(--color-neutral-light-60);
   --color-table-border-selected-checkbox: var(--color-primary);
   --color-table-border-rows: var(--color-neutral-light-90);
+  --color-table-border-select-radio: var(--color-neutral-light-60);
+  --color-table-border-select-radio-focusable: var(--color-primary-dark-20);
 
   --color-table-box-shadow-action: var(--color-black-alpha-30);
   --color-table-box-shadow-checkbox: var(--color-black-alpha-15);
@@ -1020,8 +1084,8 @@
   --color-table-color-single-action-hover: var(--color-primary-dark-20);
   --color-table-color-text: var(--color-neutral-dark-60);
 
-/*------------------------------------*\
-  TABLE COLUMN LINK
+  /*------------------------------------*\
+TABLE COLUMN LINK
 \*------------------------------------*/
 
   --color-table-color-link: var(--color-primary);
@@ -1029,39 +1093,49 @@
   --color-table-color-link-hover: var(--color-primary-dark-20);
   --color-table-color-link-pressed: var(--color-primary-dark-40);
 
-/*------------------------------------*\
+  /*------------------------------------*\
+TABLE COLUMN MANAGER
+\*------------------------------------*/
+
+  --color-table-column-manager-body-color-background-scrollbar: var(--color-primary);
+  --color-table-column-manager-border-color: var(--color-neutral-light-90);
+  --color-table-column-manager-close-button-color: var(--color-primary);
+  --color-table-column-manager-header-title: var(--color-neutral-dark-60);
+  --color-table-column-manager-outline-color-focus: var(--color-secondary);
+
+  /*------------------------------------*\
   TAG
 \*------------------------------------*/
 
---color-tag-border-color-dashed-focus: var(--color-secondary);
+  --color-tag-border-color-dashed-focus: var(--color-secondary);
 
---color-tag-color: var(--color-white);
---color-tag-color-danger: var(--color-danger);
---color-tag-color-info: var(--color-neutral);
---color-tag-color-success: var(--color-success);
---color-tag-color-warning: var(--color-warning);
---color-tag-color-text-label: var(--color-neutral);
+  --color-tag-color: var(--color-white);
+  --color-tag-color-danger: var(--color-danger);
+  --color-tag-color-info: var(--color-neutral);
+  --color-tag-color-success: var(--color-success);
+  --color-tag-color-warning: var(--color-warning);
+  --color-tag-color-text-label: var(--color-neutral);
 
---color-tag-background-color-danger: var(--color-danger);
---color-tag-background-color-info: var(--color-neutral);
---color-tag-background-color-success: var(--color-success);
---color-tag-background-color-warning: var(--color-warning);
---color-tag-background-color-white:var(--color-white);
+  --color-tag-background-color-danger: var(--color-danger);
+  --color-tag-background-color-info: var(--color-neutral);
+  --color-tag-background-color-success: var(--color-success);
+  --color-tag-background-color-warning: var(--color-warning);
+  --color-tag-background-color-white: var(--color-white);
 
---color-tag-inverse-border-color-01: var(--color-01);
---color-tag-inverse-border-color-02: var(--color-02);
---color-tag-inverse-border-color-03: var(--color-03);
---color-tag-inverse-border-color-04: var(--color-04);
---color-tag-inverse-border-color-05: var(--color-05);
---color-tag-inverse-border-color-06: var(--color-06);
---color-tag-inverse-border-color-07: var(--color-07);
---color-tag-inverse-border-color-08: var(--color-08);
---color-tag-inverse-border-color-09: var(--color-09);
---color-tag-inverse-border-color-10: var(--color-10);
---color-tag-inverse-border-color-11: var(--color-11);
---color-tag-inverse-border-color-12: var(--color-12);
+  --color-tag-inverse-border-color-01: var(--color-01);
+  --color-tag-inverse-border-color-02: var(--color-02);
+  --color-tag-inverse-border-color-03: var(--color-03);
+  --color-tag-inverse-border-color-04: var(--color-04);
+  --color-tag-inverse-border-color-05: var(--color-05);
+  --color-tag-inverse-border-color-06: var(--color-06);
+  --color-tag-inverse-border-color-07: var(--color-07);
+  --color-tag-inverse-border-color-08: var(--color-08);
+  --color-tag-inverse-border-color-09: var(--color-09);
+  --color-tag-inverse-border-color-10: var(--color-10);
+  --color-tag-inverse-border-color-11: var(--color-11);
+  --color-tag-inverse-border-color-12: var(--color-12);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   TEXTAREA
 \*------------------------------------*/
 
@@ -1075,7 +1149,7 @@
   --color-textarea-text-error: var(--color-danger);
   --color-textarea-background-color-scrollbar: var(--color-primary);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   TOOLBAR
 \*------------------------------------*/
 
@@ -1088,14 +1162,26 @@
   --color-toolbar-color-default: var(--color-primary);
   --color-toolbar-color-title: var(--color-tertiary);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   TOOLTIP
 \*------------------------------------*/
 
   --color-tooltip-background-color-balloon: var(--color-neutral);
   --color-tooltip-color-text-balloon: var(--color-white);
 
-/*------------------------------------*\
+  /*------------------------------------*\
+  TREEVIEW
+\*------------------------------------*/
+
+  /** Tree View Item */
+  --color-tree-view-item-border-bottom-color: var(--color-neutral-light-90);
+
+  /** Tree View Item Header */
+  --color-tree-view-item-header-button-color: var(--color-primary);
+  --color-tree-view-item-header-button-focus: var(--color-secondary);
+  --color-tree-view-item-header-label-text-color: var(--color-neutral);
+
+  /*------------------------------------*\
   UPLOAD
 \*------------------------------------*/
 
@@ -1137,7 +1223,7 @@
 
   --color-upload-file-restrictions-color-text: var(--color-neutral);
 
-/*------------------------------------*\
+  /*------------------------------------*\
   WIDGET
 \*------------------------------------*/
 
@@ -1158,5 +1244,4 @@
   --color-widget-background-color-disabled: var(--color-neutral-light-90);
   --color-widget-background-color-scroll-disabled: var(--color-neutral-light-40);
   --color-widget-color-disabled: var(--color-neutral-light-40);
-
 }
