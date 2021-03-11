@@ -2,6 +2,8 @@
 
 Tema para [PO UI](http://po-ui.io) feito da combinação entre @totvs/po-theme e @totvs/po-bemacash-theme": "^2.0.0-beta.1"
 
+![image](https://user-images.githubusercontent.com/22710963/110790028-4c5b2100-824f-11eb-9cc9-3400f5124b49.png)
+
 ## Como usar o tema
 
 Para utilizá-lo, instale o pacote `simbox-po-theme` conforme abaixo:
