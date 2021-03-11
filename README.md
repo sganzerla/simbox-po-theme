@@ -6,7 +6,7 @@ Tema para [PO UI](http://po-ui.io) feito da combinação entre @totvs/po-theme e
 
 Para utilizá-lo, instale o pacote `simbox-po-theme` conforme abaixo:
 
-  npm i --save simbox-po-theme
+    npm i --save simbox-po-theme
 
 Em seguida, atualize o arquivo `angular.json` para utilizar o tema.
 
