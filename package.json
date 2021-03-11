@@ -1,12 +1,12 @@
 {
   "name": "simbox-po-theme",
-  "version": "1.0.6",
-  "author": "",
+  "version": "1.0.7",
+  "author": "Simbox",
   "description": "Po Custom Theme - simbox-po-theme",
   "repository": {},
   "license": "MIT",
   "scripts": {
-    "build": "po-theme build --fonts --name=simbox"
+    "build": "po-theme build --fonts"
   },
   "devDependencies": {
     "@po-ui/style": "^2.10.0"
