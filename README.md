@@ -1,4 +1,6 @@
 # simbox-po-theme
+[![NPM version](https://img.shields.io/npm/v/simbox-po-theme?color=%0000ff&style=flat-square)](https://www.npmjs.com/package/simbox-po-theme) [![NPM downloads](https://img.shields.io/npm/dm/simbox-po-theme?color=%0000ff&label=npm%20downloads&style=flat-square)](https://www.npmjs.com/package/simbox-po-theme) [![MIT licensed](https://img.shields.io/npm/l/simbox-po-theme?color=%0000ff&style=flat-square)](https://github.com/sganzerla/simbox-po-theme/blob/master/LICENSE)
+
 
 Tema para [PO UI](http://po-ui.io) feito da combinação entre @totvs/po-theme e @totvs/po-bemacash-theme": "^2.0.0-beta.1"
 
