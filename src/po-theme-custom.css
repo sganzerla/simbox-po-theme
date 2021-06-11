@@ -111,13 +111,13 @@
   --color-primary: #f37021;
 
   /* Hover do Botão primário, Links, Cor da borda do botão secundário */
-  --color-primary-dark-20: #f37021;
+  --color-primary-dark-20: #f37061;
 
   /* Pressed do Botão primário, Links, Cor da borda do botão secundário */
-  --color-primary-dark-40: #f37021;
+  --color-primary-dark-40: #f37061;
 
   /* Secondary */
-  --color-secondary: #f37021;
+  --color-secondary: #f37061;
 
   --color-secondary-dark-20: #d1550b;
 
@@ -131,7 +131,7 @@
   /* Tertiary */
 
   /* Cor do background da linha de arquivo em carregamento (Upload) */
-  --color-tertiary-light-90: #fde8de;
+  --color-tertiary-light-90: #eaf7f9;
 
   /* Borda esquerda do menu lateral selecionado, Tab selecionada, Card em destaque */
   --color-tertiary: #f37021;
@@ -436,11 +436,14 @@
   --color-calendar-text-box-background-active: var(--color-white);
 
   --color-calendar-background-color-box-background-selected: var(--color-tertiary);
-  --color-calendar-background-color-box-background-today: var(--color-primary-light-80);
+  --color-calendar-background-color-box-background-range: var(--color-primary-light-80);
   --color-calendar-background-color-box-background-today-hover: var(--color-neutral-light-80);
+
+  --color-calendar-background-color-border-today: var(--color-primary);
 
   --color-calendar-color-box-foreground: var(--color-neutral);
   --color-calendar-color-box-foreground-selected: var(--color-white);
+  --color-calendar-color-box-foreground-range: var(--color-primary);
   --color-calendar-color-box-foreground-today: var(--color-primary);
   --color-calendar-color-box-foreground-disabled: var(--color-neutral-light-80);
 
